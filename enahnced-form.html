@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Conference 2025 Registration</title>
+    <meta
+      name="description"
+      content="Register for the Tech Conference 2025, with details on speakers, sessions, and ticket options."
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Tech Conference 2025 Registration</h1>
+      <p>
+        Join us for an incredible two-day event filled with innovation,
+        learning, and networking.
+      </p>
+    </header>
+
+    <main>
+      <section id="conference-overview">
+        <h2>Conference Highlights</h2>
+        <figure>
+          <img
+            src="https://via.placeholder.com/600x300.png?text=Conference+Keynote+Speaker"
+            alt="A professional speaker presenting to a large audience at a conference."
+            width="600"
+            height="300"
+          />
+          <figcaption>
+            Keynote speaker sharing insights on the future of AI.
+          </figcaption>
+        </figure>
+
+        <h3>Schedule at a Glance</h3>
+        <p>
+          Our two-day event is packed with exciting talks and workshops. Here's
+          a brief overview:
+        </p>
+        <table>
+          <caption>
+            Main Stage Sessions (All times are in UTC)
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Time</th>
+              <th scope="col">Topic</th>
+              <th scope="col">Speaker</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>09:00 - 10:00</td>
+              <td>Opening Keynote: The AI Revolution</td>
+              <td>Dr. Jane Doe</td>
+            </tr>
+            <tr>
+              <td>10:15 - 11:00</td>
+              <td>Web3 and Decentralized Applications</td>
+              <td>John Smith</td>
+            </tr>
+            <tr>
+              <td>11:15 - 12:00</td>
+              <td>Cybersecurity Best Practices</td>
+              <td>Sarah Lee</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Why You Should Attend</h3>
+        <ul>
+          <li>Hear from over 50 industry-leading speakers.</li>
+          <li>Participate in hands-on workshops and masterclasses.</li>
+          <li>Network with professionals from around the globe.</li>
+          <li>Gain insights into the latest tech trends.</li>
+        </ul>
+      </section>
+
+      <section id="registration-form">
+        <h2>Complete Your Registration</h2>
+        <form action="/submit-registration" method="post">
+          <fieldset>
+            <legend>Personal Information</legend>
+            <p>
+              <label for="full-name">Full Name:</label>
+              <input
+                type="text"
+                id="full-name"
+                name="full_name"
+                placeholder="Enter your full name"
+                required
+                autocomplete="name"
+              />
+            </p>
+            <p>
+              <label for="email">Email Address:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="e.g., your.name@example.com"
+                required
+                autocomplete="email"
+              />
+            </p>
+            <p>
+              <label for="phone">Phone Number:</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+                placeholder="e.g., 1234567890"
+                title="Phone number must be 10 digits (e.g., 1234567890)"
+                autocomplete="tel"
+              />
+            </p>
+            <p>
+              <label for="dob">Date of Birth:</label>
+              <input type="date" id="dob" name="dob" required />
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Ticket and Workshops</legend>
+            <p>
+              <label for="ticket-type">Select Your Ticket Type:</label>
+              <select id="ticket-type" name="ticket_type" required>
+                <option value="">--Please choose an option--</option>
+                <option value="standard">Standard Pass ($500)</option>
+                <option value="premium">Premium Pass ($800)</option>
+                <option value="student">Student Pass ($250)</option>
+              </select>
+            </p>
+            <p>
+              <strong>Optional Workshops:</strong><br />
+              <label>
+                <input type="checkbox" name="workshop" value="ai-masterclass" />
+                AI Masterclass
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="workshop"
+                  value="blockchain-fundamentals"
+                />
+                Blockchain Fundamentals
+              </label>
+              <label>
+                <input type="checkbox" name="workshop" value="ux-design" /> UX
+                Design Principles
+              </label>
+            </p>
+            <p>
+              <label for="session-preference"
+                >Preferred Session Topics (Rate 1-5):</label
+              >
+              <input
+                type="range"
+                id="session-preference"
+                name="session_preference"
+                min="1"
+                max="5"
+                value="3"
+                list="ratings"
+              />
+              <datalist id="ratings">
+                <option value="1" label="Low"></option>
+                <option value="5" label="High"></option>
+              </datalist>
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Payment Information</legend>
+            <p>
+              <label for="card-number">Credit Card Number:</label>
+              <input
+                type="text"
+                id="card-number"
+                name="card_number"
+                pattern="[0-9]{13,16}"
+                title="Credit card number must be between 13 and 16 digits."
+                required
+                autocomplete="cc-number"
+              />
+            </p>
+            <p>
+              <label for="expiry-date">Expiry Date (MM/YY):</label>
+              <input
+                type="text"
+                id="expiry-date"
+                name="expiry_date"
+                pattern="(0[1-9]|1[0-2])\/\d{2}"
+                placeholder="MM/YY"
+                required
+              />
+            </p>
+            <p>
+              <label for="cvv">CVV:</label>
+              <input
+                type="password"
+                id="cvv"
+                name="cvv"
+                minlength="3"
+                maxlength="4"
+                required
+              />
+            </p>
+          </fieldset>
+
+          <p>
+            <label>
+              <input type="checkbox" name="terms" required /> I agree to the
+              <a href="#terms-and-conditions">terms and conditions</a>.
+            </label>
+          </p>
+
+          <button type="submit">Complete Registration</button>
+          <button type="reset">Clear Form</button>
+        </form>
+      </section>
+
+      <section id="terms-and-conditions">
+        <h3>Terms and Conditions</h3>
+        <p>
+          This is a placeholder for the terms and conditions. By registering,
+          you agree to all conference policies.
+        </p>
+        <p>
+          <a href="#conference-overview">Back to top</a>
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p><small>&copy; 2025 Tech Conference. All Rights Reserved.</small></p>
+    </footer>
+  </body>
+</html>
